@@ -1,7 +1,7 @@
 
 class Application {
     constructor() {
-        this.preloadWords();
+        this.knownWords = new Set();
 
         this.wordList = document.getElementById('list');
         this.wordInput = document.getElementById('word');
@@ -10,8 +10,10 @@ class Application {
         for (let i = 0; i < buttons.length; i++) {
             const value = buttons[i];
             document.getElementById('add-' + value)
-                .addEventListener('click', (_) => this.buttonClicked(value));
+            .addEventListener('click', (_) => this.buttonClicked(value));
         }
+
+        this.preloadWords();
     }
 
     buttonClicked(value) {
@@ -25,13 +27,24 @@ class Application {
             .then(words => {
                 const wordList = words['words'];
                 for (let i = 0; i < wordList.length; i++) {
-                    this.addWordToList(wordList[i]);
+                    this.addNewWord(wordList[i], false, false);
                 }
             });
     }
 
-    addNewWord(wordData) {
-        this.sendWord(wordData);
+    addNewWord(wordData, check = true, send = true) {
+        if (check) {
+            if (this.knownWords.has(wordData.word)) {
+                alert('Word already exists!');
+                return;
+            }
+        }
+
+        this.knownWords.add(wordData.word);
+
+        if (send)
+            this.sendWord(wordData);
+
         this.addWordToList(wordData);
 
         this.wordInput.focus();
