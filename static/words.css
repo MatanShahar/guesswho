@@ -1,79 +1,95 @@
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *, *:before, *:after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
-    padding: 16px;
+  margin: 0;
+  padding: 0;
 }
 
 input {
-    width: 100%;
-    box-shadow: 0 0 4px #0008;
-    border: none;
-    border-radius: 5px;
-    padding: 8px;
+  width: 100%;
+  box-shadow: 0 0 4px #0008;
+  border: none;
+  border-radius: 5px;
+  padding: 8px;
 }
 
-  .btn {
-    flex-grow: 1;
-    min-height: 32px;
-    border: none;
-    border-radius: 6px;
-    background: royalblue;
-    color: white;
-  }
+.form {
+  padding: 16px;
+  position: sticky;
+  top: 0;
+  background: #fffc;
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.7) 90%, rgba(255,255,255,0) 100%);
+  backdrop-filter: blur(8px);
+}
 
-  .btn:not(first-child) {
-    margin: 0 4px;
-  }
+.list-container {
+  padding: 0 16px 16px 16px;
+}
 
-  .list {
-    padding: 0;
-  }
+.btn {
+  flex-grow: 1;
+  min-height: 32px;
+  border: none;
+  border-radius: 6px;
+  background: royalblue;
+  color: white;
+}
 
-  .list > li {
-    display: flex;
-    margin: 0;
-    text-decoration: none;
-  }
+.btn:not(first-child) {
+  margin: 0 4px;
+}
 
-  .list > li > span {
-    padding: 4px;
-    border-radius: 4px;
-    margin: 4px;
-  }
+.list {
+  padding: 0;
+  margin: 0;
+}
 
-  .list > li > span:first-child {
-    background: lightblue;
-    flex: 5;
-  }
+.list > li {
+  display: flex;
+  margin-bottom: 8px;
+  text-decoration: none;
+}
 
-  .list > li > span:last-child {
-    background: yellow;
-    flex: 1;
-    text-align: center;
-  }
+.list > li > span {
+  padding: 4px;
+}
 
-  .list > li > span.vl1 {
-    background: rgb(124, 255, 189);
-  }
+.list > li > span:first-child {
+  background: lightblue;
+  flex: 5;
+  border-radius: 8px 0 0 8px;
+}
 
-  .list > li > span.vl2 {
-    background: rgb(206, 255, 108);
-  }
+.list > li > span:last-child {
+  background: yellow;
+  flex: 1;
+  text-align: center;
+  border-radius: 0 8px 8px 0;
+}
 
-  .list > li > span.vl3 {
-    background: rgb(255, 255, 120);
-  }
+.list > li > span.vl1 {
+  background: rgb(124, 255, 189);
+}
 
-  .list > li > span.vl4 {
-    background: sandybrown;
-  }
+.list > li > span.vl2 {
+  background: rgb(206, 255, 108);
+}
 
-  .list > li > span.vl5 {
-    background: salmon;
-  }
+.list > li > span.vl3 {
+  background: rgb(255, 255, 120);
+}
+
+.list > li > span.vl4 {
+  background: sandybrown;
+}
+
+.list > li > span.vl5 {
+  background: salmon;
+}
