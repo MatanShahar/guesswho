@@ -1,0 +1,79 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    padding: 16px;
+}
+
+input {
+    width: 100%;
+    box-shadow: 0 0 4px #0008;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+  .btn {
+    flex-grow: 1;
+    min-height: 32px;
+    border: none;
+    border-radius: 6px;
+    background: royalblue;
+    color: white;
+  }
+
+  .btn:not(first-child) {
+    margin: 0 4px;
+  }
+
+  .list {
+    padding: 0;
+  }
+
+  .list > li {
+    display: flex;
+    margin: 0;
+    text-decoration: none;
+  }
+
+  .list > li > span {
+    padding: 4px;
+    border-radius: 4px;
+    margin: 4px;
+  }
+
+  .list > li > span:first-child {
+    background: lightblue;
+    flex: 5;
+  }
+
+  .list > li > span:last-child {
+    background: yellow;
+    flex: 1;
+    text-align: center;
+  }
+
+  .list > li > span.vl1 {
+    background: rgb(124, 255, 189);
+  }
+
+  .list > li > span.vl2 {
+    background: rgb(206, 255, 108);
+  }
+
+  .list > li > span.vl3 {
+    background: rgb(255, 255, 120);
+  }
+
+  .list > li > span.vl4 {
+    background: sandybrown;
+  }
+
+  .list > li > span.vl5 {
+    background: salmon;
+  }
