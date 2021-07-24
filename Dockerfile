@@ -1,6 +1,5 @@
 FROM node:12-alpine
 
-USER node
 WORKDIR /app
 COPY package.json yarn.lock /app/
 
@@ -8,7 +7,8 @@ RUN yarn
 
 COPY data/ /app/data/
 COPY static/ /app/static/
-COPY index.js /app/
+COPY index.ts /app/
+COPY src/ /app/src/
 
 EXPOSE 8080
 

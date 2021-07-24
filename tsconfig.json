@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "allowJs": false,
+        "strict": true,
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "target": "ES5"
+    }
+}
