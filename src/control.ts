@@ -16,10 +16,11 @@ export class GameController {
         }
 
         const words = this.activeCollections[collection];
-        const index = Math.floor(Math.random() * words.length)
+        const index = Math.floor(Math.random() * words.length);
+        const result = words[index];
         this.activeCollections[collection].splice(index, 1);
 
-        return words[index];
+        return result;
     }
 
     public getPointsValue(wordValue: number) {

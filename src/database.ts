@@ -20,7 +20,7 @@ export class Database {
     }
 
     public collection(name: string): Word[] {
-        return this._collections[name].words;
+        return [...this._collections[name].words];
     }
 };
 
